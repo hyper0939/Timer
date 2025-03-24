@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self';">
+    <title>Timer App | by Hyper</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<div class="container">
+    <img src="image/Bg.svg" class="Bg" alt="Background Image">
+    <span class="Title">Timer - App</span>
+    <input type="text" placeholder="Enter minutes..." class="Input" aria-label="Timer duration in minutes" maxlength="3">
+    <button class="Set" title="Start/Stop the timer">SET</button>
+    <span class="Remaining" aria-live="polite">Enter minutes to start</span>
+    <div class="Progressbar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="pro"></div>
+    </div>
+</div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

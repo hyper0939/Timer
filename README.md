@@ -2,7 +2,7 @@
 
 A simple and elegant timer application that continues running in the system tray.
 
-![Timer App Screenshot](https://i.imgur.com/WBVFYYb.png)
+![Timer App Screenshot](src/image/screenshot.png)
 
 ## Features
 
@@ -70,4 +70,4 @@ Developed by Hyper
 
 ## License
 
-GPL-3.0
+MIT 

@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap');
+
+* {
+    overflow: hidden;
+    outline: none;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+}
+
+.container {
+    position: fixed;
+    display: flex;
+    width: 450px;
+    height: 130px;
+    top: 0%;
+    left: 0%;
+    transition: background 0.3s ease;
+}
+
+.Bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.Title {
+    position: absolute;
+    display: flex;
+    width: 447px;
+    height: 26px;
+    left: 0.4%;
+    top: 1%;
+    justify-content: center;
+    transition: 300ms;
+    cursor: help;
+
+    font-family: "Sansita", sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.tray-info {
+    position: absolute;
+    display: flex;
+    width: 180px;
+    padding: 5px;
+    top: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+    z-index: 100;
+    
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 4px;
+    
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    text-align: center;
+    color: #fff;
+}
+
+.close-info {
+    position: absolute;
+    display: flex;
+    width: auto;
+    padding: 4px 8px;
+    bottom: 4px;
+    left: 18%;
+    transform: translateY(100%);
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+    z-index: 100;
+    
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    text-align: center;
+    color: #7ed6a9;
+}
+
+.Input {
+    position: absolute;
+    display: flex;
+    width: 257px;
+    height: 24px;
+    bottom: 1%;
+    left: 18%;
+    transition: 300ms;
+
+    background: transparent;
+    border: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+    font-family: "Sansita", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+}
+
+.Input:focus {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.Input:disabled {
+    opacity: 0.5;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.Input.error {
+    animation: shake 0.5s;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.8);
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.Set {
+    position: absolute;
+    display: flex;
+    width: 65px;
+    height: 25px;
+    bottom: 0%;
+    right: 0%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 200ms;
+
+    border: 0.50px solid #1ba970;
+    background: #126041;
+    border-radius: 4px;
+
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+}
+
+.Set:hover {
+    transition: 100ms;
+    transform: scale(1.08);
+    font-size: 14px;
+    background: #1ba970;
+}
+
+.Set:active {
+    transform: scale(.9);
+}
+
+.Remaining {
+    position: absolute;
+    display: flex;
+    width: 257px;
+    height: 17px;
+    left: 21.5%;
+    top: 30%;
+    justify-content: center;
+    transition: 500ms;
+
+    font-family: "Sansita", sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.Progressbar {
+    position: absolute;
+    display: flex;
+    width: 257px;
+    height: 10px;
+    left: 21.5%;
+    top: 50%;
+    transition: 500ms;
+
+    background: rgba(217, 217, 217, 0.1);
+    border-radius: 50px 0;
+    overflow: hidden;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.pro {
+    position: relative;
+    display: flex;
+    width: 0%;
+    height: 10px;
+    transition: width 1s linear, background 0.5s ease;
+
+    border-radius: 50px 0;
+    background: rgba(27, 169, 112, 0.6);
+    box-shadow: 0 0 5px rgba(27, 169, 112, 0.6);
+}
+
+/* Flash animation for timer completion */
+@keyframes flash {
+    0%, 50%, 100% { background-color: rgba(0, 0, 0, 0); }
+    25%, 75% { background-color: rgba(169, 27, 27, 0.2); }
+}
+
+.flash {
+    animation: flash 0.5s ease infinite;
+}
